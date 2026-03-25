@@ -1,0 +1,79 @@
+{
+En java un arreglo es un objeto. Se escribe el tipo, el nombre, luego
+=new y entre corchetes el número de casillas disponibles, que en
+realidad son espacios en memoria. También puede hacerse lo mismo
+en dos líneas de código.
+
+hj
+Para recorrer un arreglo usamos
+algún ciclo: for, while o do…while.
+Lo importante es NO salirse del
+rango.
+
+Para “llenar” un arreglo, básicamente podemos proceder de
+3 maneras:
+• Llenarlo desde teclado, es decir, preguntar al usuario por
+los datos
+• Llenarlo de manera aleatoria
+• Iniciarlo con valores predeterminados desde en el mismo
+algoritmo/programa
+
+La función random SI
+depende del lenguaje de
+programación,
+Math.random() por si sola,
+devuelve un aleatorio en el
+rango de (0,1). Aquí por
+ejemplo, se generan tiradas
+de dado
+
+Una matriz es una colección de datos organizados en filas y columnas. Por
+ello, para hacer referencia a una localidad de la matriz se necesitan de dos
+números:
+ El número de renglón.
+ El número de columna.
+0 1 2 3 4 5
+0
+1
+2
+3
+Una matriz en Java es un arreglo bidimensional, por ejemplo una matriz de
+3x4 se puede implementar como un arreglo de 3 filas con 4 elementos
+cada uno.
+int matrix [][]= {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 9, 5, 4}}; 1 2 3 4
+5 6 7 8
+9 9 5 4
+En general:
+Tipo nombre [] []=new int[#renglones][#columnas] ;
+
+En un arreglo de dos dimensiones,
+también conocido matriz, cada
+elemento se asocia con una
+pareja de índices.
+ Conceptualizamos un arreglo bi-
+dimensional como una
+cuadrícula rectangular de
+elementos divididos en filas y
+columnas, y utilizamos la notación
+[fila, columna] para identificar un
+elemento específico
+
+La estructura tradicional de recorrido de matrices son dos ciclos for
+anidados. La vista básica es la siguiente:
+Nota:
+Num. Renglones o filas:
+mat.length
+Num. Columnas:
+mat[0].length
+
+Esta estructura de doble ciclo nos permite recorrer todas las localidades el
+arreglo, con el primer ciclo for se recorren los renglones, y con el segundo
+ciclo se recorren las columnas (recorrido clásico).
+ En el primer ciclo se recorre cada renglón, para ello la variable del ciclo (i)
+toma los valores: 0, 1, 2, ... , renglones - 1
+que son precisamente los números de cada renglón de la matriz.
+ En el segundo ciclo para el renglón i, se recorre cada columna de la matriz,
+para ello la variable del ciclo ( j) toma los valores:
+0, 1, 2, ... , columnas-1
+que son precisamente los números de cada columna de la matriz.
+
