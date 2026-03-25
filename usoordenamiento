@@ -1,0 +1,10 @@
+public class UsoOrdenamiento {
+  public static void main(String args[]) {
+    //constructor 1
+    Arreglo arreglo1= new Arreglo(10);
+    arreglo1.llenarAleatorio(20);
+    System.out.println("Arreglo original (desordenado) : ");
+    System.out.println("Arreglo 1: " +arreglo1);
+    
+  }
+}
