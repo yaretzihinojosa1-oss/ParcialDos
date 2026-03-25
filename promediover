@@ -1,0 +1,24 @@
+public class VerificarOrden {
+    public static void main(String[] args) {
+        // Ejemplo descendente: 10, 8, 5, 2
+        int[] arreglo = {10, 9, 7, 5, 2}; 
+        
+        boolean estaOrdenado = true;
+
+        // Recorremos hasta length - 1 para no salirnos del límite al comparar i + 1
+        for (int i = 0; i < arreglo.length - 1; i++) {
+            if (arreglo[i] < arreglo[i + 1]) {
+                // Si el de la izquierda es menor que el de la derecha, 
+                // ya no es descendente.
+                estaOrdenado = false;
+                break; // Salimos del bucle de inmediato
+            }
+        }
+
+        if (estaOrdenado) {
+            System.out.println("ordenado");
+        } else {
+            System.out.println("no ordenado");
+        }
+    }
+}
