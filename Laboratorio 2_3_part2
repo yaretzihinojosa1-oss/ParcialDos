@@ -1,0 +1,88 @@
+/*
+
+*/
+
+import java.util.*;
+
+public class MyClass {
+    public static void main(String[] args) {
+
+        // Constructor 1
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Número de elementos ?");
+        int n = entrada.nextInt();
+        //Arreglo1
+        Arreglo arreglo1 = new Arreglo(n);
+        arreglo1.llenarTeclado();
+        System.out.println("Arreglo 1: " + arreglo1);
+        if (verificadorOrden(arreglo1.values))
+            System.out.println("Ordenado");
+        else
+            System.out.println("No ordenado");
+    }
+
+
+    public static boolean verificadorOrden(int x[])  {
+        boolean ordenado=true;
+        for (int i=0; i<x.length-1;i++) {
+            if (x[i]>x[i+1])
+               ordenado = false;
+    }
+    return ordenado; 
+    }
+}   
+        
+class Arreglo {
+
+    public int[] values;
+
+
+    public Arreglo(int cantidad) {
+        values = new int[cantidad];
+    }
+
+    public Arreglo(int[] values) {
+        this.values = values;
+    }
+
+ //Método para llenar desde teclado
+    public void llenarTeclado() {
+        Scanner entrada = new Scanner(System.in);
+        for (int i = 0; i < values.length; i++) {
+            System.out.println("Da el dato " +i);
+            values[i] = entrada.nextInt();
+        }
+    }
+
+    // Método para llenar con números aleatorios
+    public void llenarAleatorio(int limite) {
+        Random random = new Random();
+        for (int i = 0; i < values.length; i++) {
+            values[i] = random.nextInt(limite);
+        }
+    }
+
+    // Método para calcular el promedio
+    public double promedio() {
+        int suma = 0;
+        for (int i = 0; i < values.length; i++) {
+            suma += values[i];
+        }
+        return (double) suma / values.length;
+    }
+
+    public int maximo() {
+        int max = values[0];
+        return max;   
+    }
+
+    // Método para obtener el valor mínimo
+    public int minimo() {
+       return 0;
+    }
+
+    public String toString() {
+        return Arrays.toString(values);
+    }
+}
+
