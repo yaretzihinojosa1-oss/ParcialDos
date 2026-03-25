@@ -1,0 +1,13 @@
+public class PromedioNotas {
+    public static void main(String[] args) {
+        int[] calificaciones = {8, 9, 7, 10, 6, 5};
+        double suma = 0;
+
+        for (int nota : calificaciones) {
+            suma += nota;
+        }
+
+        double promedio = suma / calificaciones.length;
+        System.out.println("El promedio es: " + promedio);
+    }
+}
